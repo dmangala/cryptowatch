@@ -5,6 +5,7 @@ import GlobalChart from "./components/GlobalChart";
 import ToTop from "./components/ToTop";
 import axios from "axios";
 
+
 const App = () => {
   const [coinsData, setCoinsData] = useState([]);
 

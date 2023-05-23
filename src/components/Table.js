@@ -1,6 +1,9 @@
 import React, { useState } from "react";
-import TableLine from "./TableLine";
+import TableLine from "./TableLine";0
 import ToTop from "./ToTop";
+
+import Slider from '@mui/material/Slider';
+
 
 const Table = ({ coinsData }) => {
   const [orderBy, setOrderBy] = useState("");
@@ -59,13 +62,14 @@ const Table = ({ coinsData }) => {
               onChange={(e) => setRangeNumber(e.target.value)}
             />
           </span>
-          <input
-            type="range"
-            min="1"
-            max="250"
-            value={rangeNumber}
-            onChange={(e) => setRangeNumber(e.target.value)}
+          <Slider 
+            aria-label="Default" 
+            onChange={(e) => setRangeNumber(e.target.value)} 
+            min={1}
+            max={250}
           />
+
+        
           <ToTop />
         </div>
         {tableHeader.map((el) => (
